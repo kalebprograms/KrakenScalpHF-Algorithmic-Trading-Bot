@@ -1,45 +1,51 @@
-# Freqtrade KrakenScalpHF Bot
+# 🚀 KrakenScalpHF Algorithmic Trading Bot
 
-This repo contains a custom Freqtrade strategy for Kraken spot trading on the 5 minute timeframe.
+High-frequency cryptocurrency trading bot built with Freqtrade for Kraken spot markets.
 
-## Included
+## 📊 Overview
 
-- `strategies/KrakenScalpHF.py` - the strategy file
-- `user_data/config.example.json` - safe example config with secrets removed
-- `backtest-metadata/` - metadata from prior backtest runs
-- `.gitignore` - blocks secrets, DB files, and generated runtime files from being committed
+This project implements a short-term scalping strategy optimized for a 5-minute timeframe, combining technical indicators and price action confirmation to identify high-probability entries.
 
-## Strategy summary
+Designed to demonstrate:
 
-`KrakenScalpHF` uses:
+* Algorithmic trading logic
+* Quantitative strategy development
+* Backtesting and performance analysis
+* Python-based automation workflows
 
-- EMA fast / EMA slow
-- RSI oversold filter
-- Bollinger Bands mid/lower behavior
-- Volume confirmation
-- Simple bounce confirmation from previous close
+---
 
-Current defaults in the strategy:
+## ⚙️ Strategy Summary
 
-- Timeframe: `5m`
-- ROI: `0.004`
-- Stoploss: `-0.007`
-- Exit signal: disabled
-- Trailing stop: disabled
+KrakenScalpHF uses a confluence-based approach:
 
-## Important
+* EMA (Fast & Slow): trend direction and pullback entries
+* RSI: oversold condition detection
+* Bollinger Bands: price positioning within volatility range
+* Volume Filter: confirms market participation
+* Bounce Confirmation: avoids entering during continued downward momentum
 
-Do **not** upload your real API keys, Telegram token, bot password, or other secrets to GitHub.
+### Default Parameters
 
-Before using this bot locally:
+* Timeframe: 5m
+* ROI Target: 0.4%
+* Stoploss: -0.7%
+* Trailing Stop: Disabled
+* Exit Signal: Disabled (ROI-based exits)
 
-1. Copy `user_data/config.example.json` to `user_data/config.json`
-2. Add your own real credentials only in the local `config.json`
-3. Keep `user_data/config.json` out of Git with the included `.gitignore`
+---
 
-## Suggested repo structure
+## 🛠 Tech Stack
 
-```
+* Python
+* Freqtrade
+* Pandas
+* TA-Lib
+
+---
+
+## 📁 Project Structure
+
 freqtrade-github-repo/
 ├── strategies/
 │   └── KrakenScalpHF.py
@@ -49,38 +55,103 @@ freqtrade-github-repo/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-```
 
-## Quick start
+---
 
-```bash
-git clone <your-repo-url>
-cd freqtrade-github-repo
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+git clone https://github.com/kalebprograms/Trading-bot-unfinished-.git
+cd Trading-bot-unfinished-
+
+### 2. Set Up Environment
+
 python -m venv .venv
-source .venv/bin/activate  # Windows PowerShell: .venv\Scripts\Activate.ps1
+
+Activate environment:
+
+Mac/Linux:
+source .venv/bin/activate
+
+Windows PowerShell:
+.venv\Scripts\Activate.ps1
+
+### 3. Install Dependencies
+
 pip install -r requirements.txt
-```
 
-Create your local config:
+---
 
-```bash
+## 🔑 Configuration Setup
+
+Create your local config file:
+
 cp user_data/config.example.json user_data/config.json
-```
 
-Then edit `user_data/config.json` with your real local credentials.
+Then edit:
 
-## Example Git commands
+user_data/config.json
 
-```bash
-git init
-git add .
-git commit -m "Initial commit for KrakenScalpHF freqtrade bot"
-git branch -M main
-git remote add origin <your-github-repo-url>
-git push -u origin main
-```
+Add your:
 
-## Notes on your uploaded files
+* Exchange API keys
+* Telegram bot credentials (optional)
+* Custom settings
 
-Your uploaded config included live secrets, so this repo bundle intentionally replaces them with placeholders.
-If those credentials were ever exposed publicly, rotate them before using the bot again.
+---
+
+## ▶️ Running the Bot
+
+freqtrade trade --config user_data/config.json --strategy KrakenScalpHF
+
+---
+
+## 📈 Backtesting
+
+freqtrade backtesting --config user_data/config.json --strategy KrakenScalpHF --timeframe 5m
+
+Backtest metadata is included in:
+backtest-metadata/
+
+---
+
+## 🔒 Security Notice
+
+Sensitive data is NOT included in this repository.
+
+Never commit:
+
+* API keys
+* Exchange secrets
+* Telegram tokens
+* Passwords
+
+If any credentials were previously exposed, rotate them immediately.
+
+---
+
+## 📌 Future Improvements
+
+* Hyperparameter optimization (Freqtrade Hyperopt)
+* Multi-timeframe signal confirmation
+* Machine learning-based entry signals
+* Performance visualization dashboard
+
+---
+
+## 💼 Resume Description
+
+KrakenScalpHF Algorithmic Trading Bot
+
+* Developed a Python-based automated trading system using Freqtrade
+* Implemented EMA, RSI, and Bollinger Band strategies for short-term scalping
+* Designed entry logic using volume filtering and price action confirmation
+* Performed backtesting and optimization across multiple cryptocurrency pairs
+* Integrated risk management with stop-loss and ROI targets
+
+---
+
+## 📄 License
+
+This project is for educational and portfolio purposes.
