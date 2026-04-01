@@ -8,10 +8,10 @@ This project implements a short-term scalping strategy optimized for a 5-minute 
 
 Designed to demonstrate:
 
-* Algorithmic trading logic
-* Quantitative strategy development
-* Backtesting and performance analysis
-* Python-based automation workflows
+- Algorithmic trading logic  
+- Quantitative strategy development  
+- Backtesting and performance analysis  
+- Python-based automation workflows  
 
 ---
 
@@ -19,28 +19,28 @@ Designed to demonstrate:
 
 KrakenScalpHF uses a confluence-based approach:
 
-* EMA (Fast & Slow): trend direction and pullback entries
-* RSI: oversold condition detection
-* Bollinger Bands: price positioning within volatility range
-* Volume Filter: confirms market participation
-* Bounce Confirmation: avoids entering during continued downward momentum
+- EMA (Fast & Slow): trend direction and pullback entries  
+- RSI: oversold condition detection  
+- Bollinger Bands: price positioning within volatility range  
+- Volume Filter: confirms market participation  
+- Bounce Confirmation: avoids entering during continued downward momentum  
 
 ### Default Parameters
 
-* Timeframe: 5m
-* ROI Target: 0.4%
-* Stoploss: -0.7%
-* Trailing Stop: Disabled
-* Exit Signal: Disabled (ROI-based exits)
+- Timeframe: `5m`  
+- ROI Target: `0.4%`  
+- Stoploss: `-0.7%`  
+- Trailing Stop: Disabled  
+- Exit Signal: Disabled (ROI-based exits)  
 
 ---
 
 ## 🛠 Tech Stack
 
-* Python
-* Freqtrade
-* Pandas
-* TA-Lib
+- Python  
+- Freqtrade  
+- Pandas  
+- TA-Lib  
 
 ---
 
@@ -62,24 +62,24 @@ freqtrade-github-repo/
 
 ### 1. Clone the Repository
 
-git clone https://github.com/kalebprograms/Trading-bot-unfinished-.git
-cd Trading-bot-unfinished-
+git clone https://github.com/kalebprograms/KrakenScalpHF-Algorithmic-Trading-Bot.git  
+cd KrakenScalpHF-Algorithmic-Trading-Bot  
 
 ### 2. Set Up Environment
 
-python -m venv .venv
+python -m venv .venv  
 
 Activate environment:
 
-Mac/Linux:
-source .venv/bin/activate
+Mac/Linux:  
+source .venv/bin/activate  
 
-Windows PowerShell:
-.venv\Scripts\Activate.ps1
+Windows PowerShell:  
+.venv\Scripts\Activate.ps1  
 
 ### 3. Install Dependencies
 
-pip install -r requirements.txt
+pip install -r requirements.txt  
 
 ---
 
@@ -87,32 +87,32 @@ pip install -r requirements.txt
 
 Create your local config file:
 
-cp user_data/config.example.json user_data/config.json
+cp user_data/config.example.json user_data/config.json  
 
 Then edit:
 
-user_data/config.json
+user_data/config.json  
 
 Add your:
 
-* Exchange API keys
-* Telegram bot credentials (optional)
-* Custom settings
+- Exchange API keys  
+- Telegram bot credentials (optional)  
+- Custom settings  
 
 ---
 
 ## ▶️ Running the Bot
 
-freqtrade trade --config user_data/config.json --strategy KrakenScalpHF
+freqtrade trade --config user_data/config.json --strategy KrakenScalpHF  
 
 ---
 
 ## 📈 Backtesting
 
-freqtrade backtesting --config user_data/config.json --strategy KrakenScalpHF --timeframe 5m
+freqtrade backtesting --config user_data/config.json --strategy KrakenScalpHF --timeframe 5m  
 
-Backtest metadata is included in:
-backtest-metadata/
+Backtest metadata is included in:  
+backtest-metadata/  
 
 ---
 
@@ -122,10 +122,10 @@ Sensitive data is NOT included in this repository.
 
 Never commit:
 
-* API keys
-* Exchange secrets
-* Telegram tokens
-* Passwords
+- API keys  
+- Exchange secrets  
+- Telegram tokens  
+- Passwords  
 
 If any credentials were previously exposed, rotate them immediately.
 
@@ -133,10 +133,10 @@ If any credentials were previously exposed, rotate them immediately.
 
 ## 📌 Future Improvements
 
-* Hyperparameter optimization (Freqtrade Hyperopt)
-* Multi-timeframe signal confirmation
-* Machine learning-based entry signals
-* Performance visualization dashboard
+- Hyperparameter optimization (Freqtrade Hyperopt)  
+- Multi-timeframe signal confirmation  
+- Machine learning-based entry signals  
+- Performance visualization dashboard  
 
 ---
 
@@ -144,11 +144,11 @@ If any credentials were previously exposed, rotate them immediately.
 
 KrakenScalpHF Algorithmic Trading Bot
 
-* Developed a Python-based automated trading system using Freqtrade
-* Implemented EMA, RSI, and Bollinger Band strategies for short-term scalping
-* Designed entry logic using volume filtering and price action confirmation
-* Performed backtesting and optimization across multiple cryptocurrency pairs
-* Integrated risk management with stop-loss and ROI targets
+- Developed a Python-based automated trading system using Freqtrade  
+- Implemented EMA, RSI, and Bollinger Band strategies for short-term scalping  
+- Designed entry logic using volume filtering and price action confirmation  
+- Performed backtesting and optimization across multiple cryptocurrency pairs  
+- Integrated risk management with stop-loss and ROI targets  
 
 ---
 
