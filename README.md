@@ -248,7 +248,7 @@ Run the backtest command from the repository root
 Review results and iterate
 Notes for Recruiters and Reviewers
 
-## This project reflects hands-on experimentation with rule-based trading systems rather than production financial advice. The focus of the repository is:
+This project reflects hands-on experimentation with rule-based trading systems rather than production financial advice. The focus of the repository is:
 
 strategy logic design
 backtesting workflow
