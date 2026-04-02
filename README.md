@@ -1,4 +1,4 @@
-# KrakenScalpHF Algorithmic Trading Bot
+# Bitcoin/USDT XRP/USDT Algorithmic Trading Bot
 
 A Python-based algorithmic trading strategy built with Freqtrade for Kraken spot markets on the 5-minute timeframe.
 
