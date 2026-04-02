@@ -14,15 +14,15 @@ class KrakenScalpHF(IStrategy):
     startup_candle_count = 50
 
     minimal_roi = {
-        "0": 0.004
+        "0": 0.01
     }
 
-    stoploss = -0.007
+    stoploss = -0.0015
     trailing_stop = False
 
     use_exit_signal = False
     exit_profit_only = True
-    ignore_roi_if_entry_signal = False
+    ignore_roi_if_entry_signal = True
 
     buy_rsi = IntParameter(25, 45, default=40, space="buy")
     ema_fast_len = IntParameter(8, 20, default=12, space="buy")
@@ -33,6 +33,7 @@ class KrakenScalpHF(IStrategy):
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe["ema_fast"] = ta.EMA(dataframe, timeperiod=int(self.ema_fast_len.value))
         dataframe["ema_slow"] = ta.EMA(dataframe, timeperiod=int(self.ema_slow_len.value))
+        dataframe["ema_200"] = ta.EMA(dataframe, timeperiod=200)
         dataframe["rsi"] = ta.RSI(dataframe, timeperiod=14)
 
         bb = ta.BBANDS(dataframe, timeperiod=20, nbdevup=2.0, nbdevdn=2.0)
