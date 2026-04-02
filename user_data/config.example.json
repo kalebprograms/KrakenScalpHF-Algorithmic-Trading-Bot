@@ -1,0 +1,130 @@
+{
+  "$schema": "https://schema.freqtrade.io/schema.json",
+  "bot_name": "freqtrade",
+  "initial_state": "running",
+  "max_open_trades": 20,
+  "stake_currency": "USDT",
+  "stake_amount": 25,
+  "tradable_balance_ratio": 0.99,
+  "fiat_display_currency": "USD",
+  "dry_run": true,
+  "dry_run_wallet": 50000,
+  "db_url": "sqlite:///tradesv3.krakenscalphf_v2.dryrun.sqlite",
+  "trading_mode": "spot",
+  "margin_mode": "",
+  "cancel_open_orders_on_exit": true,
+  "force_entry_enable": false,
+  "unfilledtimeout": {
+    "entry": 10,
+    "exit": 10,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "stoploss": "market",
+    "stoploss_on_exchange": false
+  },
+  "entry_pricing": {
+    "price_side": "same",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0.0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "same",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exchange": {
+    "name": "kraken",
+    "key": "YOUR_KRAKEN_API_KEY",
+    "secret": "YOUR_KRAKEN_API_SECRET",
+    "ccxt_config": {},
+    "ccxt_async_config": {},
+    "pair_whitelist": [
+      "ADA/USDT",
+      "ALEO/USDT",
+      "ALGO/USDT",
+      "APE/USDT",
+      "ATOM/USDT",
+      "AVAX/USDT",
+      "BCH/USDT",
+      "BERA/USDT",
+      "BNB/USDT",
+      "BTC/USDT",
+      "CC/USDT",
+      "CRO/USDT",
+      "DAI/USDT",
+      "DOGE/USDT",
+      "DOT/USDT",
+      "ETH/USDT",
+      "EURR/USDT",
+      "FARTCOIN/USDT",
+      "FIDD/USDT",
+      "KAS/USDT",
+      "LINK/USDT",
+      "LTC/USDT",
+      "MANA/USDT",
+      "MELANIA/USDT",
+      "OBOL/USDT",
+      "PENGU/USDT",
+      "RAVE/USDT",
+      "RLUSD/USDT",
+      "S/USDT",
+      "SHIB/USDT",
+      "SIDEKICK/USDT",
+      "SOL/USDT",
+      "TON/USDT",
+      "TRUMP/USDT",
+      "USAT/USDT",
+      "USDC/USDT",
+      "USDE/USDT",
+      "USDG/USDT",
+      "USDQ/USDT",
+      "USDR/USDT",
+      "VET/USDT",
+      "VIRTUAL/USDT",
+      "XAUT/USDT",
+      "XRP/USDT",
+      "XTZ/USDT"
+    ],
+    "pair_blacklist": [
+      "XMR/USDT"
+    ]
+  },
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "download_trades": true,
+  "telegram": {
+    "enabled": false,
+    "token": "YOUR_TELEGRAM_BOT_TOKEN",
+    "chat_id": "YOUR_TELEGRAM_CHAT_ID",
+    "allowed_users": [
+      "YOUR_TELEGRAM_CHAT_ID"
+    ]
+  },
+  "api_server": {
+    "enabled": true,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "verbosity": "error",
+    "enable_openapi": false,
+    "jwt_secret_key": "YOUR_RANDOM_JWT_SECRET",
+    "ws_token": "YOUR_RANDOM_WS_TOKEN",
+    "CORS_origins": [],
+    "username": "YOUR_USERNAME",
+    "password": "YOUR_STRONG_PASSWORD"
+  },
+  "internals": {
+    "process_throttle_secs": 5
+  }
+}

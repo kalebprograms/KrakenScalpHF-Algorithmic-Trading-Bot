@@ -1,0 +1,29 @@
+# Secrets / local runtime
+user_data/config.json
+.env
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+
+# Freqtrade runtime folders
+user_data/data/
+user_data/backtest_results/
+user_data/hyperopt_results/
+user_data/logs/
+user_data/plot/
+user_data/freqai_models/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
