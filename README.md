@@ -71,12 +71,13 @@ freqtrade-github-repo/
 ├── README.md
 ├── requirements.txt
 ├── user_data/
-│   ├── config.example.json
-│   └── strategies/
-│       └── KrakenScalpHF.py
+│ ├── config.example.json
+│ └── strategies/
+│ └── KrakenScalpHF.py
 ├── backtest-metadata/
 └── strategies/
-    └── KrakenScalpHF.py
+└── KrakenScalpHF.py
+
 ## Important Folder Note
 
 Freqtrade uses the strategy file inside:
